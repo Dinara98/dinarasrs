@@ -1,0 +1,18 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Title: {{ menu.title }}</h1>
+
+  <p><strong>Guest:</strong> <a href="">{{ menu.guest }}</a></p> <!-- guest detail link not yet defined -->
+  <p><strong>Summary:</strong> {{ menu.summary }}</p>
+  <p><strong>PRICE:</strong> {{ menu.price }}</p> 
+  <p><strong>Language:</strong> {{ menu.language }}</p>  
+  <p><strong>Eating:</strong> {% for eating in menu.eating.all %} {{ eating }}{% if not forloop.last %}, {% endif %}{% endfor %}</p>  
+
+  <div style="margin-left:20px;margin-top:20px">
+
+    
+   
+
+  </div>
+{% endblock %}
